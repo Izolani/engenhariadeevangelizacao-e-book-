@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engenharia de Evangelização – Transformando a Missão em Processo, Estratégia e Expansão do Reino de Deus</title>
+  <meta name="description" content="Engenharia de Evangelização, de Dr. Antonio Orlando Izolani: princípios de engenharia e gestão de processos aplicados à missão evangelística.">
+  <meta property="og:title" content="Engenharia de Evangelização">
+  <meta property="og:description" content="Transformando a Missão em Processo, Estratégia e Expansão do Reino de Deus.">
+  <meta property="og:type" content="website">
+  <style>
+    :root {
+      --marinho: #0B1F3A;
+      --dourado: #C9A227;
+      --offwhite: #F8F6F0;
+      --texto: #2B2B2B;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: Georgia, "Times New Roman", serif; color: var(--texto); background: var(--offwhite); line-height: 1.7; }
+    h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; color: var(--marinho); line-height: 1.25; }
+    h2 { font-size: 2rem; margin-bottom: 1.2rem; }
+    h3 { font-size: 1.2rem; margin-bottom: .5rem; }
+    p { margin-bottom: 1rem; }
+    a { color: var(--marinho); }
+    section { padding: 80px 20px; }
+    .container { max-width: 1040px; margin: 0 auto; }
+    .sans { font-family: "Segoe UI", Arial, sans-serif; }
+
+    /* Menu fixo */
+    nav { position: fixed; top: 0; left: 0; right: 0; background: var(--marinho); z-index: 100; }
+    nav .container { display: flex; justify-content: space-between; align-items: center; padding: 14px 20px; flex-wrap: wrap; gap: 8px; }
+    nav .logo { color: var(--dourado); font-family: Georgia, serif; font-size: 1rem; text-decoration: none; }
+    nav ul { list-style: none; display: flex; gap: 18px; flex-wrap: wrap; }
+    nav a { color: #fff; text-decoration: none; font-family: "Segoe UI", Arial, sans-serif; font-size: .9rem; }
+    nav a:hover { color: var(--dourado); }
+
+    /* Hero */
+    .hero { background: linear-gradient(160deg, var(--marinho), #13305A); color: #fff; text-align: center; padding-top: 140px; }
+    .hero h1 { color: #fff; font-size: 2.8rem; margin-bottom: .5rem; }
+    .hero .subtitulo { color: var(--dourado); font-size: 1.25rem; margin-bottom: 1.5rem; }
+    .hero .versiculo { font-style: italic; max-width: 680px; margin: 0 auto 1.2rem; opacity: .92; }
+    .hero .autoria { font-family: "Segoe UI", Arial, sans-serif; font-size: .95rem; opacity: .9; margin-bottom: 2rem; }
+    .moldura { display: inline-block; border: 2px solid var(--dourado); padding: 30px 40px; margin-bottom: 2rem; border-radius: 6px; }
+    .moldura span { display: block; font-family: "Playfair Display", Georgia, serif; font-size: 1.6rem; color: var(--dourado); letter-spacing: 2px; }
+    .btn { display: inline-block; background: var(--dourado); color: var(--marinho); padding: 14px 30px; border-radius: 6px; text-decoration: none; font-family: "Segoe UI", Arial, sans-serif; font-weight: bold; transition: transform .2s, box-shadow .2s; }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,.25); }
+
+    /* Blocos */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px; }
+    .card { background: #fff; border-top: 3px solid var(--dourado); padding: 24px; border-radius: 6px; box-shadow: 0 2px 10px rgba(11,31,58,.06); }
+    .eixos { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 1rem; }
+    .eixos span { background: var(--marinho); color: #fff; padding: 8px 14px; border-radius: 20px; font-family: "Segoe UI", Arial, sans-serif; font-size: .9rem; }
+    .alt { background: #fff; }
+    ul.lista { padding-left: 1.2rem; }
+    ul.lista li { margin-bottom: .4rem; }
+
+    /* Sumário */
+    details { background: #fff; border: 1px solid #e3dcc6; border-radius: 6px; margin-bottom: 10px; padding: 14px 18px; }
+    summary { cursor: pointer; color: var(--marinho); font-weight: bold; font-family: "Segoe UI", Arial, sans-serif; }
+    details ol { margin: 12px 0 0 1.4rem; }
+
+    /* Checklist */
+    .checklist li { list-style: none; margin-bottom: .5rem; font-family: "Segoe UI", Arial, sans-serif; }
+    .checklist li::before { content: "☐  "; color: var(--dourado); }
+
+    /* Autor */
+    .autor { display: flex; gap: 40px; align-items: center; flex-wrap: wrap; }
+    .autor img { width: 100%; max-width: 280px; aspect-ratio: 1 / 1; object-fit: cover; border: 2px solid var(--dourado); border-radius: 16px; }
+    .autor .texto { flex: 1; min-width: 260px; }
+
+    /* Transparência */
+    .transparencia { background: #FFF8E1; border-left: 4px solid var(--dourado); padding: 16px 20px; font-family: "Segoe UI", Arial, sans-serif; font-size: .92rem; border-radius: 4px; }
+
+    /* CTA e rodapé */
+    .cta { background: var(--marinho); color: #fff; text-align: center; }
+    .cta h2 { color: #fff; }
+    footer { background: #060F1E; color: #bbb; text-align: center; padding: 30px 20px; font-family: "Segoe UI", Arial, sans-serif; font-size: .88rem; }
+    footer .versiculo { color: var(--dourado); margin-top: 8px; }
+
+    #topo { position: fixed; right: 20px; bottom: 20px; background: var(--dourado); color: var(--marinho); border: none; width: 46px; height: 46px; border-radius: 50%; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .3s; box-shadow: 0 4px 12px rgba(0,0,0,.2); }
+    #topo.visivel { opacity: 1; pointer-events: auto; }
+
+    /* Animação de entrada */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visivel { opacity: 1; transform: none; }
+
+    @media (max-width: 720px) {
+      .hero h1 { font-size: 2rem; }
+      h2 { font-size: 1.6rem; }
+      nav ul { gap: 10px; }
+      section { padding: 60px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="#inicio" class="logo">Engenharia de Evangelização</a>
+    <ul>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#para-quem">Para quem</a></li>
+      <li><a href="#conteudo">Conteúdo</a></li>
+      <li><a href="#sumario">Sumário</a></li>
+      <li><a href="#autor">Autor</a></li>
+      <li><a href="#compra">Adquirir</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="inicio">
+  <div class="container reveal">
+    <div class="moldura"><span>ENGENHARIA</span><span>DE EVANGELIZAÇÃO</span></div>
+    <h1>Engenharia de Evangelização</h1>
+    <p class="subtitulo">Transformando a Missão em Processo, Estratégia e Expansão do Reino de Deus</p>
+    <p class="versiculo">"Ide por todo o mundo, pregai o evangelho a toda criatura." — Marcos 16:15</p>
+    <p class="autoria">Por Dr. Antonio Orlando Izolani<br>Licenciatura Plena em Química • Mestre em Química Inorgânica • Doutor em Geoquímica Ambiental</p>
+    <a href="#sobre" class="btn">Quero conhecer o e-book</a>
+  </div>
+</header>
+
+<section id="sobre" class="alt">
+  <div class="container reveal">
+    <h2>Sobre o livro</h2>
+    <p>A evangelização sempre foi a principal missão da Igreja. Hoje, ela exige organização, planejamento e comunicação estratégica. Este e-book propõe aplicar princípios de engenharia, gestão de processos e estratégia organizacional à missão evangelística, sem secularizar a soberania de Deus.</p>
+    <p>O objetivo é alcançar eficácia operacional, sustentabilidade, rastreabilidade relacional e capacidade de expansão para alcançar mais vidas com fidelidade bíblica.</p>
+  </div>
+</section>
+
+<section id="para-quem">
+  <div class="container reveal">
+    <h2>Para quem é</h2>
+    <div class="grid">
+      <div class="card"><h3>Líderes de igrejas</h3><p>Pastores e líderes que querem organizar a missão com método e responsabilidade.</p></div>
+      <div class="card"><h3>Coordenadores de ministérios</h3><p>Equipes de evangelismo, discipulado e comunicação digital.</p></div>
+      <div class="card"><h3>Leitores interessados</h3><p>Quem busca a interseção entre fé, gestão e propósito.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="modelo" class="alt">
+  <div class="container reveal">
+    <h2>Os 8 eixos do modelo</h2>
+    <p>A Engenharia de Evangelização se apoia em oito eixos vitais do ministério:</p>
+    <div class="eixos">
+      <span>Fidelidade Bíblica</span>
+      <span>Clareza Missional</span>
+      <span>Planejamento Plurianual</span>
+      <span>Comunicação Multiplataforma</span>
+      <span>Discipulado Pessoal</span>
+      <span>Inovação Tecnológica</span>
+      <span>Visão Estratégica</span>
+      <span>Governança Transparente</span>
+    </div>
+  </div>
+</section>
+
+<section id="conteudo">
+  <div class="container reveal">
+    <h2>O que você vai aprender</h2>
+    <div class="grid">
+      <div class="card"><h3>Processo em 7 etapas</h3><p>Da segmentação de público à multiplicação ministerial.</p></div>
+      <div class="card"><h3>5 pilares</h3><p>Planejamento, comunicação, discipulado, tecnologia e gestão de pessoas.</p></div>
+      <div class="card"><h3>Evangelização digital</h3><p>Como atuar em cada canal com clareza e responsabilidade.</p></div>
+      <div class="card"><h3>IA e evangelização</h3><p>Usos práticos e limites éticos inegociáveis.</p></div>
+      <div class="card"><h3>Métricas de saúde</h3><p>Indicadores espirituais e organizacionais para acompanhar a missão.</p></div>
+      <div class="card"><h3>Governança e LGPD</h3><p>Compliance, proteção de dados e modelos de governança integrada.</p></div>
+      <div class="card"><h3>Eventos evangelísticos</h3><p>Logística de pré-produção, execução e pós-evento.</p></div>
+      <div class="card"><h3>Psicologia da conversão</h3><p>Etapas da decisão de fé e comunicação respeitosa.</p></div>
+      <div class="card"><h3>Inovação aberta</h3><p>Cocriação e cooperação entre congregações.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="sumario" class="alt">
+  <div class="container reveal">
+    <h2>Sumário</h2>
+    <details>
+      <summary>Ver os 21 capítulos, apêndice e referências</summary>
+      <ol>
+        <li>Apresentação</li>
+        <li>O que é Engenharia?</li>
+        <li>O que é Engenharia de Processos?</li>
+        <li>O que é Engenharia de Evangelização?</li>
+        <li>Fundamentos Bíblicos da Engenharia de Evangelização</li>
+        <li>Os Pilares da Engenharia de Evangelização</li>
+        <li>Estrutura do Processo Evangelístico</li>
+        <li>Ferramentas da Engenharia de Evangelização</li>
+        <li>Evangelização Digital</li>
+        <li>Inteligência Artificial e Evangelização</li>
+        <li>Formação de Equipes Evangelísticas</li>
+        <li>Desafios da Engenharia de Evangelização</li>
+        <li>O Futuro da Evangelização</li>
+        <li>Análise de Dados na Evangelização</li>
+        <li>Psicologia da Conversão e Comportamento Humano</li>
+        <li>Métricas de Saúde Espiritual e Organizacional</li>
+        <li>Logística de Eventos Evangelísticos</li>
+        <li>Captação e Retenção de Talentos Ministeriais</li>
+        <li>Comunicação Não-Violenta e Mediação de Conflitos na Igreja</li>
+        <li>Modelos de Governança Ministerial</li>
+        <li>Gestão de Risco e Compliance Ministerial</li>
+        <li>Inovação Aberta e Cocriação no Ministério</li>
+      </ol>
+      <p><strong>Apêndice:</strong> Checklist Prático de Implantação</p>
+      <p><strong>Também inclui:</strong> Conclusão e Referências Bibliográficas</p>
+    </details>
+  </div>
+</section>
+
+<section>
+  <div class="container reveal">
+    <h2>Checklist de implantação</h2>
+    <p>Um diferencial prático do livro: um roteiro para auditar e implantar as práticas em sua comunidade, organizado em três eixos.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Planejamento e Estratégia</h3>
+        <ul class="checklist">
+          <li>Visão e missão comunicadas à membresia</li>
+          <li>Metas para 12 meses</li>
+          <li>Cronograma anual aprovado</li>
+          <li>Orçamento para colheita e discipulado</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Processos e Fluxos</h3>
+        <ul class="checklist">
+          <li>Jornada do novo convertido mapeada</li>
+          <li>Equipe de recepção treinada</li>
+          <li>Contato com convertidos em até 48 horas</li>
+          <li>Esteira de discipulado padronizada</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Gestão de Equipes e Talentos</h3>
+        <ul class="checklist">
+          <li>Mapeamento vocacional de dons</li>
+          <li>Calendário semestral de capacitação</li>
+          <li>Reuniões quinzenais de alinhamento e oração</li>
+          <li>Plano transparente de sucessão</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="autor" class="alt">
+  <div class="container reveal autor">
+    <img id="foto-autor" src="images/foto.png" alt="Dr. Antonio Orlando Izolani">
+    <div class="texto">
+      <h2>Sobre o autor</h2>
+      <p>Dr. Antonio Orlando Izolani é Licenciado em Química, Mestre em Química Inorgânica e Doutor em Geoquímica Ambiental, pesquisador, educador e desenvolvedor de projetos cristãos e educacionais. Com sólida formação interdisciplinar, tem dedicado sua trajetória intelectual e ministerial à convergência construtiva entre metodologia científica, engenharia de processos, inovação tecnológica e o compromisso irrenunciável com a proclamação das Escrituras Sagradas. Atua ativamente na instrumentalização de líderes e comunidades de fé para a expansão sustentável e ordenada da missão do Reino de Deus.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container reveal">
+    <div class="transparencia">
+      <strong>Transparência:</strong> este e-book foi elaborado com apoio de Inteligência Artificial (IA).
+    </div>
+  </div>
+</section>
+
+<section id="compra" class="cta">
+  <div class="container reveal">
+    <h2>Pronto para começar?</h2>
+    <p style="margin-bottom:1.8rem;">Organize a missão com processo, estratégia e fidelidade bíblica.</p>
+    <a href="#" class="btn">Adquirir o e-book</a>
+  </div>
+</section>
+
+<footer>
+  <p>© Antonio Orlando Izolani</p>
+  <p class="versiculo">"Ide por todo o mundo, pregai o evangelho a toda criatura." — Marcos 16:15</p>
+</footer>
+
+<button id="topo" aria-label="Voltar ao topo">↑</button>
+
+<script>
+  // Animação de entrada ao rolar
+  const observer = new IntersectionObserver((entradas) => {
+    entradas.forEach(e => { if (e.isIntersecting) e.target.classList.add('visivel'); });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Botão voltar ao topo
+  const botaoTopo = document.getElementById('topo');
+  window.addEventListener('scroll', () => {
+    botaoTopo.classList.toggle('visivel', window.scrollY > 400);
+  });
+  botaoTopo.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+</script>
+</body>
+</html>
